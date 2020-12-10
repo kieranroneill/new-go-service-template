@@ -1,7 +1,6 @@
 package config
 
 import (
-  "github.com/kieranroneill/new-go-service-template/pkg/logger"
   "os"
 )
 
@@ -23,7 +22,6 @@ func New() *Config {
 
 func GetEnv(key string, defaultVal string) string {
 	if value, exists := os.LookupEnv(key); exists {
-	  logger.Info.Printf("here: %s", value)
 		return value
 	}
 

@@ -98,7 +98,7 @@ docker build \
 --build-arg env=production \
 --build-arg port=3000 \
 --build-arg service_name=new-go-service-template \
---build-arg version=1.0.0 \
+--build-arg version=$(<VERSION) \
 .
 ```
 

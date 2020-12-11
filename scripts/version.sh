@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 ###
 # Updates the version.
@@ -18,7 +18,10 @@ function main() {
       exit 1
   fi
 
+  # Remove the contents.
   true > VERSION
+
+  # Use the new version.
   echo "$1" >> VERSION
 
   printf "%b Version set to: %b\n" "${INFO_PREFIX}" "$1"
